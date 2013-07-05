@@ -1,0 +1,173 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>风格.net</title>
+<link  href="css/public.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+
+</style>
+
+</head>
+<body>
+	<div class="header">
+		<div class="header-content">
+			<div class="header-content-left"></div>
+			<div class="header-content-right">
+				<ul>
+					<li><img src="img/msg.png"/></li>
+					<li><img src="img/msg.png"/></li>
+				</ul>
+			</div>
+			<div class="header-content-center">
+				<ul><li><a href="">咨询</a></li><li><a href="">商店</a></li></ul>
+				<div class="header-content-center-footer"></div>
+				<div class="header-seach">
+					<input type="text"/>
+					<button>&nbsp;</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="content">
+		<div class="startup-team-info">
+			<div class="startup-team-info-left">
+				<div class="product-logo-box">
+                    <img src="{{product.logo}}" />
+				</div>
+                <p style="font-size:12px;padding:10px 0px;">{{product.website}}</p>
+				<div class="download-box">
+                    <input type="button" value="下载({{product_info.size}}MB)"/>
+                    <!--button>下载(34.1MB)</button--><span>{{product.downloadtime}}次</span>
+				</div>
+			</div>
+			<div class="startup-team-info-right">
+				<ul class="shared-link">
+					<li><img src="img/icon-weibo.png"></img>
+                    <span style="color:red;"><a href="{{product.weibosite}}">官方微博</a></span>
+					</li>
+					<li>
+						<img src="img/icon-renren.png"></img>
+                        <span style="color:blue;"><a href="{{product.renrensite}}">公共主页</a></span>
+					</li>
+					<li>
+						<img src="img/icon-douban.png"></img>
+                        <span style="color:green;"><a href="{{product.doubansite}}">豆瓣主页</a></span>
+					</li>
+				</ul>
+				<div class="startup-product-info">
+					<div class="tbar">信息</div>
+					<ul class="startup-product-score">
+						<li style="margin-left:10px;">总评分:</li>
+						<li class="full-star"></li>
+						<li class="full-star"></li>
+						<li class="full-star"></li>
+						<li class="full-star"></li>
+						<li class="half-star"></li>						
+					</ul>
+					<p>54条评论</p>
+					<ul class="startup-product-detail">
+                        <li>版本：{{product_info.version}}</li>
+                        <li>类别：{{product_info.type}}</li>
+                        <li>开发团队：{{product_info.group.name}}</li>
+                        <li>上线时间： {{product_info.online_date}}</li>
+                        <li>更新： {{product_info.update_date}}</li>
+                        <li>系统要求：{{product_info.requiresystem}}</li>
+                        <li>大小：{{product_info.size}}MB</li>
+                        <li>支持语言：{{product_info.language}}</li>
+					</ul>
+                    <img src="{{product_info.barcode}}"/>
+				</div>
+			</div>	
+			<div class="startup-team-info-center">
+                <h1>{{product.name}}</h1>
+                <p>{{product.description}}</p>
+				<!--ul class="product-tips">
+					<li><span>娱乐</span></li>
+					<li><span>文艺</span></li>
+					<li><span>草根原创</span></li>
+				</ul>
+				<div class="product-intro"></div-->
+				
+			</div>
+			<div class="product-slide-box">
+				<img src="img/product-img0.png" style="width:730px;" />
+				<ul>
+                    {% for pic in pics %}
+                    <li><img src="{{pic.pic}}" /></li>
+                    {% endfor %}
+				</ul>
+			</div>
+		</div>
+
+		<div class="startup-team-comments">
+			<ul>
+				<li class="active"><button>全部 54</button></li>
+				<li><button>ASK 23</button></li>
+				<li><button>顶 15</button></li>
+				<li><button>倒 16</button></li>
+			</ul>
+			<table width="100%">
+				<thead>
+					<tr>
+						<td  width="20%">用户</td>
+						<td width="55%">主题</td>
+						<td width="7%" style="text-indent:1em;">回应</td>
+						<td width="18%">最后回应</td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr class="devide-line"><td colspan="4"></td></tr>
+					<tr class="comments-content">
+						<td class="userheader"><img src="img/user-header-example.png"/></td>
+						<td>
+							<p class="user-comments-title">还是很不错的啊，很喜欢</p>
+							<p class="user-comments-content">界面设计和主题很喜欢~~~.....</p>
+						</td>
+						<td  class="user-comments-num">4</td>
+						<td class="user-comments-lasttime">1小时前</td>
+					</tr>
+					<tr class="devide-line"><td colspan="4"></td></tr>
+					<tr class="comments-content">
+						<td class="userheader"><img src="img/user-header-example1.png"></td>
+						<td>
+							<p class="user-comments-title">使用时遇到了问题 0 0</p>
+							<p class="user-comments-content">次奥，肯定是后端的问题！！！</p>
+						</td>
+						<td  class="user-comments-num">54</td>
+						<td   class="user-comments-lasttime">1天前</td>
+					</tr>
+					<tr class="devide-line"><td colspan="4"></td></tr>
+				</tbody>
+			</table>
+			<div class="page-break-box">
+				<span class="left-btn">&nbsp;</span><span class="active">1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span  class="right-btn">&nbsp;</span>
+			</div>
+		</div>
+		<div class="startup-team-edit-box">
+			<div class="edit-control">
+				<ul class="first-edit-control">
+					<li><input type="button"  value="顶"/><!--button>顶</button--></li>
+					<li><input type="button"  value="倒"/></li>
+					<li><input type="button"  value="ASK"/></li>
+					<span style="margin-left:50px;">&nbsp;</span>
+					<span>&nbsp;</span><span>&nbsp;</span>
+					<span>&nbsp;</span><span>&nbsp;</span>
+					
+				</ul>
+
+				<ul class="second-edit-control">
+					<li><img src="img/comment-icons0.png"></li>
+					<li><img src="img/comment-icons1.png"></li>
+					<li><img src="img/comment-icons2.png"></li>
+					<li><img src="img/comment-icons3.png"></li>
+					<li><img src="img/comment-icons4.png"></li>
+				</ul>
+			</div>
+			<input class="startup-team-edit-title" type="text"/>
+			<textarea class="startup-team-edit-content"></textarea>
+		</div>
+
+	</div>
+</body>
+</html>

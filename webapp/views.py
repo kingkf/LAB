@@ -58,3 +58,11 @@ def login_user(request):
         else:
             state = "Your username and/or password were incorrect."
     return render_to_response('login.html',{'state':state, 'username': username})
+
+def show_product(request, product_id):
+    product = Product_Primary_Table.objects.filter(id=product_id)
+    product_info = product.product_information_table_set.all()
+    pics = product.product_pic_table_set.all()
+    return render_to_response("product.html", {'product': product, 
+                                               'product_info': product_info,
+                                               'pics':pics})
