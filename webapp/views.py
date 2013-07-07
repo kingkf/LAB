@@ -31,9 +31,9 @@ def register_page(request):
     if request.method == 'POST':
         form = RegistrationForm(request.POST)
         if form.is_valid():
-            user = User.objects.create_user(username=form.clean_data['username'],
-            password=form.clean_data['password1'],
-            email=form.clean_data['email']
+            user = User.objects.create_user(username=form.cleaned_data['username'],
+            password=form.cleaned_data['password1'],
+            email=form.cleaned_data['email']
             )
         return HttpResponseRedirect('/webapp/')
     else:
@@ -57,12 +57,15 @@ def login_user(request):
                 state = "Your account is not active, please contact the site admin."
         else:
             state = "Your username and/or password were incorrect."
-    return render_to_response('login.html',{'state':state, 'username': username})
+    return render_to_response('login.html',
+                                {'state':state,'username': username},
+                                context_instance=RequestContext(request))
 
 def show_product(request, product_id):
+    product_id = int(product_id)
     product = Product_Primary_Table.objects.filter(id=product_id)
-    product_info = product.product_information_table_set.all()
-    pics = product.product_pic_table_set.all()
-    return render_to_response("product.html", {'product': product, 
+    product_info = product[0].product_information_table_set.all()
+    pics = product[0].product_pic_table_set.all()
+    return render_to_response("product.html", {'product': product[0], 
                                                'product_info': product_info,
                                                'pics':pics})

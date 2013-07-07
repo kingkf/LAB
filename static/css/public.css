@@ -1,0 +1,667 @@
+/*reset.css*/
+html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6,
+p, blockquote, pre,a, abbr, acronym, address, big, cite, code,del, dfn, em, 
+img, ins, kbd, q, s, samp,small, strike, strong, sub, sup, tt, var,b, u, i, center,
+dl, dt, dd, ol, ul, li,fieldset, form, label, legend,table, caption, 
+tbody, tfoot, thead, tr, th, td,article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, menu, nav, output,
+ruby, section, summary,time, mark, audio, video {
+margin: 0;padding: 0;border: 0;font-size: 100%;font: inherit;vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+display: block;}
+body {
+	line-height: 1;
+}
+ol, ul {list-style: none;}
+blockquote, q {quotes: none;}
+blockquote:before, blockquote:after,
+q:before, q:after {content: '';content: none;}table {border-collapse: collapse;border-spacing: 0;}
+h1{
+	font:normal bold 25px/30px arial,sans-serif;
+}
+
+
+body{
+
+	/*background: url(../img/background-img.jpg);*/
+	font-size: 微软雅黑;
+}
+a{
+
+	color: #fff;
+	text-decoration: none;
+	font-weight: bold;
+}
+.header{
+
+	
+	height:50px;
+}
+
+.header-content{
+	height:50px;
+	width: 980px;
+	margin:0 auto;
+	line-height: 50px;
+	background: url(../img/header-content-bg.jpg) center center no-repeat;
+}
+.header-content-left{
+	float: left;
+	height: 50px;
+	width:150px;
+	background: url(../img/header-logo.png) right center no-repeat;
+}
+.header-content ul{
+
+	height: 50px;
+}
+
+.header-content-right{
+
+	float: right;
+	width: 110px;
+	height: 50px;
+}
+
+.header-content-right ul li{
+	float: left;
+	height:50px;
+	width:55px;
+	background: url(../img/header-devide.png) left center no-repeat;
+	
+}
+.header-content-right ul li img{
+	margin-left:20px;
+	margin-top:15px;
+}
+.header-content-center{
+	margin-left: 150px;
+	margin-right:110px;
+	position: relative;
+}
+
+.header-content-center ul{
+	width: 450px;
+}
+.header-content-center ul li{
+	height: 50px;
+	width: 120px;
+	text-align: center;
+
+	float: left;
+	background: url(../img/header-devide.png) right center no-repeat;
+}
+
+.header-content-center-footer{
+	position: absolute;
+	bottom: 0;
+	height:9px;
+	left: 0;
+	right:0;
+	background: url(../img/header-content-center-footer.png) left top no-repeat;
+}
+
+.header-seach{
+	top:0;
+	bottom:0;
+	right:0;
+	width: 260px;
+	position: absolute;
+	background: url(../img/header-search-bg.png) left center no-repeat;
+	
+
+}
+.header-seach input{
+	height:20px;
+	border:0px;
+	width:200px;
+	margin-left:5px;
+	background:#384c60;
+	float: left;
+	margin-top:14px;
+}
+
+.header-seach button{
+	cursor:pointer;
+	margin-right:22px;
+	margin-top:12px;
+	background: url(../img/header-search-btn.png) center center no-repeat;
+	border:0px;
+	width: 26px;
+	height:27px;
+	
+	float: right;
+}
+.header-seach button:active{
+	background: url(../img/header-search-btn-down.png) center center no-repeat;
+}
+
+
+.content{
+	
+	width: 980px;
+	min-height: 200px;
+	margin:0 auto;
+}
+
+.startup-team-info{
+	
+	
+
+}
+
+.startup-team-info-left{
+	width:170px;
+	height:200px;
+	padding-top: 30px;
+	/*border:1px solid black;
+	margin-left:20px;
+	margin-top:39px;*/
+	text-align: center;
+	color: #999;
+	float:left;	
+}
+
+.startup-team-info-left .product-logo-box{
+	margin: 0 auto;
+	height:140px;
+	width: 140px;
+	background: url(../img/product-logo-bg.png) center center no-repeat;
+
+}
+
+.download-box{
+	height:50px;
+	line-height: 50px;
+	background: url(../img/download-box-bg.png) center center no-repeat;
+	text-align: left;
+}
+
+.download-box input{
+	font-size: 12px;
+	color:#777;
+	width:95px;
+	height:33px;
+	border:0px;
+	background: url(../img/download-btn.png) center center no-repeat;
+	margin-left: 11px;
+	margin-right: 4px;
+	margin-right: 8px \9;
+	*margin-top: 10px;
+	display: inline-block;
+}
+
+.download-box input:active{
+	background: url(../img/download-btn-down.png) center center no-repeat;
+}
+.download-box span{
+	*margin-top: -10px;
+	font-size: 10px;
+	display: inline-block;
+}
+
+.product-logo-box img{
+	margin:6px;
+}
+
+ ul.product-tips{
+ 	height:30px;
+	padding-top: 40px;
+	padding-left: 20px;
+}
+.product-tips li{
+	
+	margin-left: 20px;
+	padding-right:32px;
+	height:30px;
+	float:left;
+	background: url(../img/right.png) right center no-repeat;
+
+}
+
+.product-tips li span{
+	padding-left:20px;
+	padding-right:5px;
+	height:30px;
+	line-height: 30px;
+	display: inline-block;
+	color: #255c5b;
+	font-family: 黑体;
+	font-size: 10px;
+	text-shadow: 0 1px 0 rgba(255,255,255,0.4);
+	background: url(../img/left.png) left center no-repeat;
+}
+
+.product-intro{
+	width: 580px;
+	margin:0 auto;
+	margin-top:30px;
+	border: 1px solid #ccc;
+	height:200px;
+	border-radius: 5px;
+	background: #fff;
+}
+
+.product-slide-box{
+	width: 780px;
+	margin-top:15px;
+	margin-right: 190px;
+	border: 1px solid #ccc;
+	height:520px;
+	border-radius: 5px;
+	background: #fff;
+
+}
+.product-slide-box > img{
+	display: block;
+	margin:30px auto;
+	border-radius: 5px;
+}
+
+.product-slide-box ul li{
+	background: url(../img/picture-slide-mix-bg.png) right top no-repeat;
+	width: 140px;
+	height:70px;
+	float: left;
+}
+
+.product-slide-box ul li.active{
+	background: url(../img/picture-slide-mix-selected-bg.png) right top no-repeat;
+}
+
+.product-slide-box ul li img{
+
+	margin-left:43px;
+	margin-top: 5px;
+	border-radius: 5px;
+}
+
+
+
+.startup-team-info-center{
+	margin-left: 170px;
+	margin-right: 190px;
+	padding: 40px 10px 10px 10px;
+	min-height: 200px;
+}
+.startup-team-info-center h1{
+
+	font-family: 黑体;
+	color: #a7a7a7;
+	padding-bottom: 40px;
+}
+
+.startup-team-info-center p{
+	text-indent: 2em;
+	margin-bottom: 10px;
+	color:#999999;
+	
+	text-shadow: 0 2px 0 rgba(255,255,255,1);
+	font:14px/20px 黑体 ;
+}
+
+.startup-team-info-right{
+	width: 190px;
+	float:right;
+	min-height: 300px;
+	padding-top:100px;
+	background:url(../img/startup-team-info-right-bg.png) 0 80px no-repeat;
+}
+
+
+.shared-link li{
+	height:40px;
+	line-height: 40px;
+	background: url(../img/share-link-divide.png) left bottom no-repeat;
+}
+.shared-link img{
+	float: left;
+	margin:4px;
+}
+.shared-link span{
+	font:14px 黑体;
+	height: 40px;
+	line-height: 40px;
+}
+
+.startup-product-info{
+	margin-top: 45px;
+	height: 520px;
+	width: 190px;
+	border: 1px solid #ccc;
+	border-radius:5px;
+	background: #fff;
+}
+.startup-product-info .tbar{
+	height: 30px;
+	line-height: 30px;
+	background: #37495c;
+	border-radius: 5px 5px 0 0;
+	color:#fff;
+	font-family:黑体;
+	text-indent: 1em;
+}
+
+.startup-product-info img{
+	margin:12px;
+}
+
+.startup-product-score{
+	padding-top: 40px;
+	height: 19px;
+}
+.startup-product-score li{
+	font-family:黑体;
+	float: left;
+	height: 19px;
+	line-height: 19px;
+}
+.startup-product-score .full-star{
+	width: 21px;
+	background: url(../img/product-star-full.png) center center no-repeat;
+}
+.startup-product-score .half-star{
+	width: 21px;
+	background: url(../img/product-star-half.png) center center no-repeat;
+}
+.startup-product-info p{
+	text-align: center;
+	font:14px/20px 黑体;
+	color: #999;
+	padding: 5px 0;
+}
+.startup-product-detail{
+
+	padding-top: 20px;
+}
+.startup-product-detail li{
+	margin-left: 10px;
+	font:12px/24px 黑体;
+
+}
+.startup-team-intro{
+	margin-top: 30px;
+	height: 520px;
+	border: 1px solid black;
+}
+
+.product-square-banner{
+
+	height: 350px;
+	border: 1px solid black;
+	background: url(../img/product-square-banner.png) center center no-repeat;
+}
+.product-square-search{
+
+	height: 280px;
+	border: 1px solid black;
+}
+
+.search-box{
+
+	width:870px;
+	height:200px;
+	border:1px solid black;
+	margin:0 auto;
+	margin-top:40px;
+
+}
+.product-square-sequence{
+
+	height:200px;
+	border: 1px solid black;
+
+}
+.product-square-infoflow{
+	min-height: 300px;
+}
+
+.info-block{
+	margin-top: 20px;
+	width: 243px;
+	height:130px;
+	border: 1px solid black;
+	float:left;
+	background: url(../img/info-block-bg.png) center center no-repeat;
+}
+
+.info-block-title{
+	margin-top:15px;
+	margin-left:20px;
+	float:left;
+}
+
+.startup-team-comments{
+	margin-top: 20px;
+	height: 500px;
+}
+
+.startup-team-comments ul{
+
+	height:80px;
+}
+.startup-team-comments ul li{
+
+	width: 150px;
+	height:60px;
+	margin-top: 20px;
+	float: left;
+	background: url(../img/comments-type-bg.png) center 6px no-repeat;
+}
+
+.startup-team-comments ul li.active{
+	background: url(../img/comments-type-active.png) center top no-repeat;
+}
+
+.startup-team-comments ul li button{
+
+	margin-top: 9px;
+	margin-left: 19px;
+	font-size: 16px;
+	color:white;
+	font-family: 黑体;
+	font-weight: bold;
+	width:111px;
+	height:39px;
+	border:0px;
+	background: url(../img/comments-type-btn.png) left top no-repeat;
+	cursor: pointer;
+}
+.startup-team-comments ul li button:active{
+	background: url(../img/comments-type-btn-down.png) left top no-repeat;
+
+}
+.startup-team-comments table{
+
+	margin-top:20px;
+}
+.startup-team-comments table thead{
+	height:30px;
+	line-height: 30px;
+	color: #676565;
+	font-weight: bold;
+	font-family: 黑体;
+	text-indent: 2em;
+}
+.startup-team-comments table .devide-line{
+	height: 3px;
+	line-height: 3px;
+	
+	background: url(../img/table-devide.png) center bottom no-repeat;
+}
+.startup-team-comments table .comments-content{
+
+	height:100px;
+	
+}
+
+.userheader{
+	text-align: center;
+	vertical-align: middle;
+	background: url(../img/table-userheader-bg.png) center center no-repeat;
+}
+
+
+.startup-team-comments ul li.active button{
+
+	color:#00eed5;
+}
+
+.user-comments-title{
+
+	color:#666;
+	font-family:黑体;
+	font-weight:bold;
+	height:60px;
+	line-height: 60px;
+	text-indent: 2em;
+}
+.user-comments-content{
+
+	color:#999;
+	font-family:黑体;
+	height:40px;
+	text-indent: 3em;
+	font-size: 12px;
+}
+.user-comments-num{
+	text-align: center;
+	color:#666;
+	font-family:黑体;
+	font-size: 32px;
+	vertical-align: middle;
+	
+}
+
+.user-comments-lasttime{
+	font-size: 10px;
+	color: #999;
+	vertical-align: bottom;
+	text-indent: 2em;
+}
+
+.page-break-box{
+
+	margin:40px auto 0px;
+	height:50px;
+	min-width: 300px;
+	text-align: center;
+	font-family: 黑体;
+}
+
+.page-break-box span{
+	width:45px;
+	height: 50px;
+	line-height: 50px;
+	display:inline-block;
+
+}
+.page-break-box span.active{
+
+	background: url(../img/page-break-selected.png) center center no-repeat;
+}
+
+.page-break-box .left-btn{
+	cursor: pointer;
+	background: url(../img/page-break-left-btn.png) center center no-repeat;
+}
+.page-break-box .left-btn:active{
+	background: url(../img/page-break-left-btn-down.png) center center no-repeat;
+}
+.page-break-box .right-btn{
+	cursor: pointer;
+	background: url(../img/page-break-right-btn.png) center center no-repeat;
+}
+.page-break-box .right-btn:active{
+	background: url(../img/page-break-right-btn-down.png) center center no-repeat;
+}
+
+.startup-team-edit-box{
+	margin-top: 20px;
+	margin-bottom: 50px;
+	min-height: 400px;
+	border: 1px solid #ccc;
+	height:500px;
+	border-radius: 5px;
+
+}
+
+.startup-team-edit-title{
+	display: block;
+	width:920px;
+	height: 40px;
+	margin :30px auto 0px;
+
+}
+
+.startup-team-edit-content{
+	display: block;
+	width: 920px;
+	height: 200px;
+	margin :30px auto 0px;
+}
+
+.edit-control{
+
+	height:150px;
+	background: #37495c;
+	border-radius: 5px 5px 0 0;
+}
+
+.first-edit-control{
+	height: 80px;
+	line-height: 80px;
+	
+}
+
+.first-edit-control > li{
+	margin-left: 20px;
+	display:inline-block; *display:inline; *zoom:1; 
+}
+
+.first-edit-control li button{
+	color:#fff;
+	font-family: 黑体;
+	width: 71px;
+	height:32px;
+	border:0px;
+	background: url(../img/edit-control-btn.png) center center no-repeat;
+	cursor:pointer;
+}
+
+.first-edit-control li input{
+	color:#fff;
+	font-family: 黑体;
+	width: 71px;
+	height:32px;
+	border:0px;
+	background: url(../img/edit-control-btn.png) center center no-repeat;
+	cursor:pointer;
+}
+
+.first-edit-control li input:active{
+	background: url(../img/edit-control-btn-down.png) center center no-repeat;
+
+}
+
+
+.first-edit-control span{
+	margin-left:5px; 
+	background: url(../img/comment-star-up.png) center center no-repeat;
+	width: 21px;
+	display:inline-block;
+}
+
+ul.second-edit-control{
+	height:70px;
+	line-height: 70px;
+}
+
+ul.second-edit-control li{
+
+	float:left;
+	margin-left:30px;
+
+}
