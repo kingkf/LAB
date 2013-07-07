@@ -8,4 +8,5 @@ urlpatterns = patterns('',
     url(r'^search/$', views.search),
     url(r'^register/$', views.register_page),
     url(r'^login/$',  views.login_user), 
+    url(r'^product/([0-9]+)/$', views.show_product),
 )
