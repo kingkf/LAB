@@ -9,4 +9,6 @@ urlpatterns = patterns('',
     url(r'^register/$', views.register_page),
     url(r'^login/$',  views.login_user), 
     url(r'^product/([0-9]+)/$', views.show_product),
+    url(r'^index/$', views.square),
+    url(r'^index/([12])/$', views.square),
 )

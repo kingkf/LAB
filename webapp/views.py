@@ -1,4 +1,5 @@
 # Create your views here.
+# -*- coding: utf-8 -*-
 from django.http import HttpResponse
 from django.http import HttpResponseRedirect
 import datetime
@@ -69,3 +70,12 @@ def show_product(request, product_id):
     return render_to_response("product.html", {'product': product[0], 
                                                'product_info': product_info,
                                                'pics':pics})
+
+def square(request, select=1):
+    if select == 1: #产品首页展示
+        product = Product_Primary_Table.objects.all()
+        return render_to_response() #TODO
+    elif select == 2: #团队首页展示
+        group = Group_Primary_Table.objects.all()
+        return render_to_response() #TODO
+
