@@ -73,7 +73,7 @@ class Group_Information_Table(models.Model):
     group = models.ForeignKey(Group_Primary_Table)
     manager = models.CharField(max_length=100)
     establish_date = models.DateField()
-    range = models.CharField(max_length=100)
+    business_range = models.CharField(max_length=100)
     address = models.CharField(max_length=100)
     scale = models.IntegerField(max_length=100)
     phone = models.IntegerField(max_length=100)
@@ -107,7 +107,7 @@ class Product_Pic_Table(models.Model):
 class Product_Information_Table(models.Model):
     product = models.ForeignKey(Product_Primary_Table)
     group = models.ForeignKey(Group_Primary_Table)
-    type = models.CharField(max_length=100)
+    genre = models.CharField(max_length=100)
     version = models.CharField(max_length=100) 
     online_date = models.DateField()
     update_date = models.DateField() 
