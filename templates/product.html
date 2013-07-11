@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>风格.net</title>
-<link  href="css/public.css" rel="stylesheet" type="text/css">
+<link  href="/static/css/public.css" rel="stylesheet" type="text/css">
 <style type="text/css">
 
 </style>
@@ -15,8 +15,8 @@
 			<div class="header-content-left"></div>
 			<div class="header-content-right">
 				<ul>
-					<li><img src="img/msg.png"/></li>
-					<li><img src="img/msg.png"/></li>
+					<li><img src="/static/img/msg.png"/></li>
+					<li><img src="/static/img/msg.png"/></li>
 				</ul>
 			</div>
 			<div class="header-content-center">
@@ -33,7 +33,7 @@
 		<div class="startup-team-info">
 			<div class="startup-team-info-left">
 				<div class="product-logo-box">
-                    <img src="{{product.logo}}" />
+                    <img src="{{product.logo.url}}" />
 				</div>
                 <p style="font-size:12px;padding:10px 0px;">{{product.website}}</p>
 				<div class="download-box">
@@ -43,16 +43,17 @@
 			</div>
 			<div class="startup-team-info-right">
 				<ul class="shared-link">
-					<li><img src="img/icon-weibo.png"></img>
-                    <span style="color:red;"><a href="{{product.weibosite}}">官方微博</a></span>
+					<li><img src="/static/img/icon-weibo.png"></img>
+                    <!--<span style="color:red;"><a href="{{product.weibosite}}">官方微博</a></span>-->
+                    <a href="{{product.weibosite}}"><span style="color:red;">官方微博</span></a>
 					</li>
 					<li>
-						<img src="img/icon-renren.png"></img>
-                        <span style="color:blue;"><a href="{{product.renrensite}}">公共主页</a></span>
+						<img src="/static/img/icon-renren.png"></img>
+                    <a href="{{product.renrensite}}"><span style="color:blue;">公共主页</span></a>
 					</li>
 					<li>
-						<img src="img/icon-douban.png"></img>
-                        <span style="color:green;"><a href="{{product.doubansite}}">豆瓣主页</a></span>
+						<img src="/static/img/icon-douban.png"></img>
+                    <a href="{{product.doubansite}}"><span style="color:green;">豆瓣主页</span></a>
 					</li>
 				</ul>
 				<div class="startup-product-info">
@@ -76,7 +77,7 @@
                         <li>大小：{{product_info.size}}MB</li>
                         <li>支持语言：{{product_info.language}}</li>
 					</ul>
-                    <img src="{{product_info.barcode}}"/>
+                    <img src="{{product_info.barcode.url}}"/>
 				</div>
 			</div>	
 			<div class="startup-team-info-center">
@@ -91,10 +92,10 @@
 				
 			</div>
 			<div class="product-slide-box">
-				<img src="img/product-img0.png" style="width:730px;" />
+				<img src="/static/img/product-img0.png" style="width:730px;" />
 				<ul>
                     {% for pic in pics %}
-                    <li><img src="{{pic.pic}}" /></li>
+                    <li><img src="{{pic.pic.url}}" /></li>
                     {% endfor %}
 				</ul>
 			</div>
@@ -119,7 +120,7 @@
 				<tbody>
 					<tr class="devide-line"><td colspan="4"></td></tr>
 					<tr class="comments-content">
-						<td class="userheader"><img src="img/user-header-example.png"/></td>
+						<td class="userheader"><img src="/static/img/user-header-example.png"/></td>
 						<td>
 							<p class="user-comments-title">还是很不错的啊，很喜欢</p>
 							<p class="user-comments-content">界面设计和主题很喜欢~~~.....</p>
@@ -129,7 +130,7 @@
 					</tr>
 					<tr class="devide-line"><td colspan="4"></td></tr>
 					<tr class="comments-content">
-						<td class="userheader"><img src="img/user-header-example1.png"></td>
+						<td class="userheader"><img src="/static/img/user-header-example1.png"></td>
 						<td>
 							<p class="user-comments-title">使用时遇到了问题 0 0</p>
 							<p class="user-comments-content">次奥，肯定是后端的问题！！！</p>
@@ -157,11 +158,11 @@
 				</ul>
 
 				<ul class="second-edit-control">
-					<li><img src="img/comment-icons0.png"></li>
-					<li><img src="img/comment-icons1.png"></li>
-					<li><img src="img/comment-icons2.png"></li>
-					<li><img src="img/comment-icons3.png"></li>
-					<li><img src="img/comment-icons4.png"></li>
+					<li><img src="/static/img/comment-icons0.png"></li>
+					<li><img src="/static/img/comment-icons1.png"></li>
+					<li><img src="/static/img/comment-icons2.png"></li>
+					<li><img src="/static/img/comment-icons3.png"></li>
+					<li><img src="/static/img/comment-icons4.png"></li>
 				</ul>
 			</div>
 			<input class="startup-team-edit-title" type="text"/>
