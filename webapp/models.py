@@ -4,6 +4,7 @@ from django.db import models
 class Group_Primary_Table(models.Model):
     name = models.CharField(max_length=100)
     description = models.TextField()
+    onesentence = models.CharField(max_length=100)
     website = models.URLField(blank=True, null=True)
     weibosite = models.URLField(blank=True, null=True)
     renrensite = models.URLField(blank=True, null=True)
@@ -14,9 +15,24 @@ class Group_Primary_Table(models.Model):
     def __unicode__(self):
         return self.name
 
+class Incubator_Primary_Table(models.Model):
+    name = models.CharField(max_length=100)
+    description = models.TextField()
+    onesentence = models.CharField(max_length=100)
+    website = models.URLField(blank=True, null=True)
+    weibosite = models.URLField(blank=True, null=True)
+    renrensite = models.URLField(blank=True, null=True)
+    tencentsite = models.URLField(blank=True, null=True)
+    logo = models.ImageField(upload_to = 'incubator_logo/')
+    '''class Meta:
+        ordering = ['name']'''
+    def __unicode__(self):
+        return self.name
+
 class Product_Primary_Table(models.Model):
     name = models.CharField(max_length=100)
     description = models.TextField()
+    onesentence = models.CharField(max_length=100)
     website = models.URLField(blank=True, null=True)
     weibosite = models.URLField(blank=True, null=True) 
     renrensite = models.URLField(blank=True, null=True) 
@@ -32,6 +48,14 @@ class Product_Primary_Table(models.Model):
 class Group_Pic_Table(models.Model):
     group = models.ForeignKey(Group_Primary_Table)
     pic = models.ImageField(upload_to = 'group_pic/') 
+    '''class Meta:
+        ordering = ['pic']'''
+    def __unicode__(self):
+        return self.pic
+
+class Incubator_Pic_Table(models.Model):
+    incubator = models.ForeignKey(Incubator_Primary_Table)
+    pic = models.ImageField(upload_to = 'incubator_pic/') 
     '''class Meta:
         ordering = ['pic']'''
     def __unicode__(self):
@@ -60,6 +84,18 @@ class Group_Information_Table(models.Model):
     def __unicode__(self):
         return self.group
 
+class Incubator_Information_Table(models.Model):
+    incubator = models.ForeignKey(Incubator_Primary_Table)
+    resourece = models.CharField(max_length=500)
+    qqnum = models.IntegerField(max_length=100)
+    phone = models.IntegerField(max_length=100)
+    email = models.EmailField(max_length=40)
+    barcode = models.ImageField(upload_to = 'incubator_barcode/')
+    '''class Meta
+        ordering = ['establish_date']'''
+    def __unicode__(self):
+        return self.incubator
+
 class Product_Pic_Table(models.Model):
     product = models.ForeignKey(Product_Primary_Table) 
     pic = models.ImageField(upload_to = 'product_pic/') 
@@ -83,3 +119,11 @@ class Product_Information_Table(models.Model):
         ordering = ['update_date']'''
     def __unicode__(self):
         return self.product
+
+class hotbanner(models.Model):
+    
+    """docstring for hotbanner
+    def __init__(self, arg):
+        super(hotbanner, self).__init__()
+        self.arg = arg"""
+        

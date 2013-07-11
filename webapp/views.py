@@ -9,6 +9,7 @@ from django.template import Context, loader
 from django.template import RequestContext
 from django.shortcuts import render_to_response
 from django.contrib.auth import authenticate, login
+import json
 
 def hello(request):
     return HttpResponse("Hello world")
@@ -71,6 +72,34 @@ def show_product(request, product_id):
                                                'product_info': product_info,
                                                'pics':pics})
 
-def square_product(request):
-    product = Product_Primary_Table.objects.all()
 
+#ajax
+def square_product(request):
+    products = Product_Primary_Table.objects.all()
+    product_dict = {}
+    for i in range(len(products)):
+        temp = {}
+        temp['logo'] = products[i].logo
+        temp['name'] = products[i].name
+        temp['onesentence'] = products[i].onesentence
+        product_dict[str(i)] = temp
+
+    return HttpResponse(json.dumps(product_dict))
+
+#ajax
+def square_group(request):
+    groups = Group_Primary_Table.objects.all()
+    group_dict = {}
+    for i in range(len(groups)):
+        temp = {}
+        temp['logo'] = groups[i].logo
+        temp['name'] = groups[i].name
+        temp['onesentence'] = groups[i].onesentence
+        group_dict[str(i)] = temp
+
+    return HttpResponse(json.dumps(group_dict))
+
+#web get
+def square_Incubator(request):
+    incubators = Incubator_Primary_Table.all()
+    return render_to_response('xxx.html', {incubators=incubators})
