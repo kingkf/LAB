@@ -1,7 +1,9 @@
 from django.db import models
+from django.contrib.auth.models import User
 
 # Create your models here.
 class Group_Primary_Table(models.Model):
+    user = models.ForeignKey(User)
     name = models.CharField(max_length=100)
     description = models.TextField()
     onesentence = models.CharField(max_length=100)
@@ -16,6 +18,7 @@ class Group_Primary_Table(models.Model):
         return self.name
 
 class Incubator_Primary_Table(models.Model):
+    user = models.ForeignKey(User)
     name = models.CharField(max_length=100)
     description = models.TextField()
     onesentence = models.CharField(max_length=100)
@@ -45,9 +48,29 @@ class Product_Primary_Table(models.Model):
     def __unicode__(self):
         return self.name
 
+class Activity_Primary_Table(models.Model):
+    name = models.CharField(max_length=100)
+    onesentence = models.CharField(max_length=100)
+    website = models.URLField(blank=True, null=True)
+    weibosite = models.URLField(blank=True, null=True)
+    renrensite = models.URLField(blank=True, null=True)
+    doubansite = models.URLField(blank=True, null=True)
+    """docstring for hotbanner
+    def __init__(self, arg):
+        super(hotbanner, self).__init__()
+        self.arg = arg"""
+
 class Group_Pic_Table(models.Model):
     group = models.ForeignKey(Group_Primary_Table)
     pic = models.ImageField(upload_to = 'group_pic/') 
+    '''class Meta:
+        ordering = ['pic']'''
+    def __unicode__(self):
+        return self.pic
+
+class Activity_Pic_Table(models.Model):
+    activity = models.ForeignKey(Activity_Primary_Table)
+    pic = models.ImageField(upload_to = 'activity_pic/') 
     '''class Meta:
         ordering = ['pic']'''
     def __unicode__(self):
@@ -121,9 +144,37 @@ class Product_Information_Table(models.Model):
         return self.product
 
 class hotbanner(models.Model):
-    
+    big_pic_1 = models.ImageField(upload_to = 'hotbanner_pic/')
+    big_pic_2 = models.ImageField(upload_to = 'hotbanner_pic/') 
+    big_pic_3 = models.ImageField(upload_to = 'hotbanner_pic/') 
+    big_pic_4 = models.ImageField(upload_to = 'hotbanner_pic/') 
+    mini_pic_1 = models.ImageField(upload_to = 'hotbanner_pic/') 
+    mini_pic_2 = models.ImageField(upload_to = 'hotbanner_pic/') 
+    mini_pic_3 = models.ImageField(upload_to = 'hotbanner_pic/') 
+    mini_pic_4 = models.ImageField(upload_to = 'hotbanner_pic/') 
     """docstring for hotbanner
     def __init__(self, arg):
         super(hotbanner, self).__init__()
+        self.arg = arg"""
+        
+class Activity_Information_Table(models.Model):
+    activity = models.ForeignKey(Activity_Primary_Table)
+    starttime = models.DateTimeField()
+    endtime = models.DateTimeField()
+    location = models.CharField(max_length=100)
+    contact = models.CharField(max_length=30)
+    registrationway = models.CharField(max_length=200)
+    registrationendtime = models.DateTimeField()
+    details = models.CharField(max_length=1000)
+    barcode = models.ImageField(upload_to = 'activity_barcode/')
+    '''class Meta
+        ordering = ['establish_date']'''
+
+class Acitivity_Host(models.Model):
+    activity = models.ForeignKey(Activity_Primary_Table)
+    user = models.ForeignKey(User)
+    """docstring for Acitivity_Host
+    def __init__(self, arg):
+        super(Acitivity_Host, self).__init__()
         self.arg = arg"""
         
